@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
+from webapp.models import *
 # from series.models import Serie
 # from series.serializers import SerieSerializer
 
@@ -18,18 +19,29 @@ class JSONResponse(HttpResponse):
 
 @csrf_exempt
 def get_landing(request):
-    return render(request, 'webapp/landing.html', {})
-    # if request.method == 'GET':
-    #     return render(request, 'webapp/landing.html', {})
-    # else:
-    #     return HttpResponseBadRequest(content='Error:')
+    # return render(request, 'webapp/landing.html', {})
+    if request.method == 'GET':
+        return render(request, 'webapp/landing.html', {})
+    else:
+        return HttpResponseBadRequest(content='Error:')
 
 @csrf_exempt
-def check_code(request):
-    if request.method == 'POST':
-        print(request.POST)
+def check_code(request,input_code):
+    print("Entroooo")
+    try:
+        if request.method == 'GET':
+            print(input_code)
+            query = DoubleCheck.objects.get(code=input_code)
+            existing_code = query.code
+            print(existing_code)
+            if input_code == existing_code:
+                state = CodeState.objects.get(value='checked')
+                query.state = state
+                query.save()
+                return render(request, 'webapp/tramitSuccess.html', {})
 
-    return render(request, 'webapp/tramit.html', {})
+    except DoubleCheck.DoesNotExist:
+        return render(request, 'webapp/tramitFailure.html', {})
 
 
 

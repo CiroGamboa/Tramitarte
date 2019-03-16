@@ -15,7 +15,7 @@ class CodeState(models.Model):
         return self.value
 
 class DoubleCheck(models.Model):
-    code = models.CharField(max_length=6)
+    code = models.CharField(max_length=6, unique = True)
     state = models.ForeignKey(CodeState, on_delete=models.CASCADE)
     fileid = models.ForeignKey(File, on_delete=models.CASCADE)
 

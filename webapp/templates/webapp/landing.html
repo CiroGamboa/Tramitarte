@@ -4,5 +4,27 @@
         <p>Landing Page</p>
     </h1>
     <p>It works!</p>
+    <!-- <form action="127.0.0.1:8000/webapp/checkCode">
+        Ingrese el código: <input type="text" name="Code"><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p> -->
+
+<!-- <form id="myForm" action="http://127.0.0.1:8000/webapp/checkCode" method="GET"> -->
+<form id="myForm"  method="GET"></form>
+  <!-- Ingrese el codigo <input type="text" name="input_code"><br> -->
+  First name: <input id="input_code" type="text" name="fname"><br>
+  <input type="button" onclick="myFunction()" value="Enviar">
+</form>
+
+<script>
+function myFunction() {
+    var input_code = document.getElementById("input_code").value
+    document.getElementById("myForm").action="http://127.0.0.1:8000/webapp/checkCode/"+input_code;
+    console.log(input_code);
+    document.getElementById("myForm").submit();
+}
+</script>
 </body>
 </html>
