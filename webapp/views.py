@@ -17,7 +17,7 @@ class JSONResponse(HttpResponse):
 
 
 @csrf_exempt
-def getLanding(request):
+def get_landing(request):
     return render(request, 'webapp/landing.html', {})
     # if request.method == 'GET':
     #     return render(request, 'webapp/landing.html', {})
