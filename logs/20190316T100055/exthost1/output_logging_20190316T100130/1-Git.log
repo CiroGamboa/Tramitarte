@@ -1,0 +1,38 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/cirogam22/Tramitarte
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse ciro
+> git rev-parse --symbolic-full-name ciro@{u}
+> git rev-list --left-right ciro...refs/remotes/origin/ciro
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse ciro
+> git rev-parse --symbolic-full-name ciro@{u}
+> git rev-list --left-right ciro...refs/remotes/origin/ciro
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :test.py
+> git ls-files --stage -- ./
+> git check-ignore -z --stdin
+> git show :test.py
+> git ls-files --stage -- ./
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :uwsgi_params
+> git ls-files --stage -- ./
+> git check-ignore -z --stdin
+> git show :tramitarte/urls.py
+> git show :tramitarte/__init__.py
+> git show :tramitarte/settings.py
+> git check-ignore -z --stdin
+> git show :tramitarte_uwsgi.ini
+> git ls-files --stage -- ./
+> git check-ignore -z --stdin
