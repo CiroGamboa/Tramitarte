@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
@@ -16,8 +16,21 @@ class JSONResponse(HttpResponse):
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
+@csrf_exempt
+def getLanding(request):
+    return render(request, 'webapp/landing.html', {})
+    # if request.method == 'GET':
+    #     return render(request, 'webapp/landing.html', {})
+    # else:
+    #     return HttpResponseBadRequest(content='Error:')
 
-#@csrf_exempt
+@csrf_exempt
+def check_code(request):
+    if request.method == 'POST':
+        print(request.POST)
+
+    return render(request, 'webapp/tramit.html', {})
+
 
 
 

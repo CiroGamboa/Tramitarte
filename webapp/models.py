@@ -1,5 +1,6 @@
 from django.db import models
-
+from pathlib import Path
+import os
 
 
 #Database tables
@@ -22,14 +23,35 @@ class DoubleCheck(models.Model):
         return self.code
 
 
-# class DatabaseHandler():
-#     '''
-#     Class in charge of managing some data related to the db
-#     '''
-#     def init_db():
-#         '''
-#         Initialize the database with test data
-#         '''
+class DatabaseHandler():
+    '''
+    Class in charge of managing some data related to the db
+    '''
+    def init_db(self):
+        '''
+        Initialize the database with test data
+        '''
+        # Creating States
+        state_generated = CodeState.objects.create(value="generated")
+        state_checked = CodeState.objects.create(value="checked")
+
+        # Creating File
+        test_path = "test_tramit_files/"
+        if not os.path.exists(test_path):
+            os.makedirs(test_path)
+        
+        file_name = "test_file.txt"
+        with open(os.path.join(test_path, file_name), 'w'):
+            pass
+        
+        # test_file = open(file_name,"w")
+        # test_file.write("Hello, World!")
+
+        ## DB Handling
+        test_record = File.objects.create(path=os.path.join(test_path, file_name))
+        test_record.save()
+
+
 
 
 
