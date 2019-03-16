@@ -16,6 +16,12 @@ class JSONResponse(HttpResponse):
         super(JSONResponse, self).__init__(content, **kwargs)
 
 
+
+#@csrf_exempt
+
+
+
+
 ###################################################################
 # Ejemplo de request/response con JSON usando djangorestframework
 # @csrf_exempt
