@@ -32,7 +32,7 @@ def check_code(request,input_code):
     try:
         if request.method == 'GET':
             print(input_code)
-            query = DoubleCheck.objects.get(code=input_code)
+            query = VehicleSell.objects.get(code=input_code)
             existing_code = query.code
             print(existing_code)
             if input_code == existing_code:
@@ -41,7 +41,14 @@ def check_code(request,input_code):
                 query.save()
                 return render(request, 'webapp/tramitSuccess.html', {})
 
-    except DoubleCheck.DoesNotExist:
+                response = HttpResponse(content_type='application/force-download') # mimetype is replaced by content_type for django 1.7
+                response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("traspaso.jpg")
+                response['X-Sendfile'] = smart_str('/home/cirogam22/Desktop/Tramitarte/webapp/output/')
+                # It's usually a good idea to set the 'Content-Length' header too.
+                # You can also set any other required headers: Cache-Control, etc.
+                return response
+
+    except VehicleSell.DoesNotExist:
         return render(request, 'webapp/tramitFailure.html', {})
 
 @csrf_exempt

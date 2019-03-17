@@ -24,8 +24,10 @@ class VehicleSell(models.Model):
     code = models.CharField(max_length=6, unique = True)
     state = models.ForeignKey(CodeState, on_delete=models.CASCADE)
     # fileid = models.ForeignKey(File, on_delete=models.CASCADE)
-    seller_pic = models.ImageField(upload_to = 'docs/', default = 'images/', blank=True)
-    buyer_pic = models.ImageField(upload_to = 'docs/', default = 'images/', blank=True)
+    seller_cedula = models.ImageField(upload_to = 'docs/cedulas/', default = 'images/', blank=True)
+    seller_propiedad = models.ImageField(upload_to = 'docs/propiedad/', default = 'images/', blank=True)
+    buyer_cedula = models.ImageField(upload_to = 'docs/cedulas', default = 'images/', blank=True)
+    buyer_propiedad = models.ImageField(upload_to = 'docs/propiedad', default = 'images/', blank=True)
 
     def __str__(self):
         return self.code
