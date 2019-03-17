@@ -4,20 +4,27 @@ import os
 
 
 #Database tables
-class File(models.Model):
-    path = models.TextField()
-    def __str__(self):
-        return self.path
+# class File(models.Model):
+#     path = models.TextField()
+#     def __str__(self):
+#         return self.path
 
 class CodeState(models.Model):
     value = models.CharField(max_length=50)
     def __str__(self):
         return self.value
 
+
+
+# class ImageTable(models.Model):
+#     model_pic = models.ImageField(upload_to = 'docs/', default = 'images/')
+
+
 class DoubleCheck(models.Model):
     code = models.CharField(max_length=6, unique = True)
     state = models.ForeignKey(CodeState, on_delete=models.CASCADE)
-    fileid = models.ForeignKey(File, on_delete=models.CASCADE)
+    # fileid = models.ForeignKey(File, on_delete=models.CASCADE)
+    model_pic = models.ImageField(upload_to = 'docs/', default = 'images/')
 
     def __str__(self):
         return self.code

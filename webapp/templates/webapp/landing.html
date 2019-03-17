@@ -21,7 +21,7 @@
 <script>
 function myFunction() {
     var input_code = document.getElementById("input_code").value
-    document.getElementById("myForm").action="http://127.0.0.1:8000/webapp/checkCode/"+input_code;
+    document.getElementById("myForm").action="/checkCode/"+input_code;
     console.log(input_code);
     document.getElementById("myForm").submit();
 }
