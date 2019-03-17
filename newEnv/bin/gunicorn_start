@@ -1,0 +1,26 @@
+#!/bin/bash
+
+NAME="tramitarte"
+DIR=/home/tramitarte/Tramitarte
+USER=tramitarte
+GROUP=tramitarte
+WORKERS=3
+BIND=unix:/home/tramitarte/Tramitarte/run/gunicorn.sock
+DJANGO_SETTINGS_MODULE=tramitarte.settings
+DJANGO_WSGI_MODULE=tramitarte.wsgi
+LOG_LEVEL=error
+
+cd $DIR
+source newEnv/bin/activate
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DIR:$PYTHONPATH
+
+exec newEnv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $WORKERS \
+  --user=$USER \
+  --group=$GROUP \
+  --bind=$BIND \
+  --log-level=$LOG_LEVEL \
+  --log-file=-

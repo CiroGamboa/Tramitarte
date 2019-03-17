@@ -25,7 +25,7 @@ SECRET_KEY = 'uo!$hacsc-g^)wyuzt1gd3(p_tuui2!z@-xiq0!%dh2$ez1_iq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','18.216.229.93','tramitarte.tech']
 
 
 # Application definition
