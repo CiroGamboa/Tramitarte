@@ -39,7 +39,7 @@ def check_code(request,input_code):
                 state = CodeState.objects.get(value='checked')
                 query.state = state
                 query.save()
-                return render(request, 'webapp/tramitSuccess.html', {})
+                #return render(request, 'webapp/tramitSuccess.html', {})
 
                 response = HttpResponse(content_type='application/force-download') # mimetype is replaced by content_type for django 1.7
                 response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("traspaso.jpg")
