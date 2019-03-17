@@ -39,11 +39,11 @@ def check_code(request,input_code):
                 state = CodeState.objects.get(value='checked')
                 query.state = state
                 query.save()
-                return render(request, 'webapp/tramitSuccess.html', {})
+                #return render(request, 'webapp/tramitSuccess.html', {})
 
                 response = HttpResponse(content_type='application/force-download') # mimetype is replaced by content_type for django 1.7
                 response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("traspaso.jpg")
-                response['X-Sendfile'] = smart_str('/home/cirogam22/Desktop/Tramitarte/webapp/output/')
+                response['X-Sendfile'] = smart_str('/webapp/output/')
                 # It's usually a good idea to set the 'Content-Length' header too.
                 # You can also set any other required headers: Cache-Control, etc.
                 return response
