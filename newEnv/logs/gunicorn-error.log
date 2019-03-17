@@ -1,0 +1,551 @@
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: ../newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: /newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: /newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: /newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 14: /newEnv/bin/activate: No such file or directory
+/home/tramitarte/Tramitarte/newEnv/bin/gunicorn_start: line 19: /home/tramitarte/Tramitarte/../bin/gunicorn: No such file or directory
+[2019-03-16 23:44:15 +0000] [6759] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/tramitarte/Tramitarte/tramitarte/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+[2019-03-16 23:44:16 +0000] [6763] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/tramitarte/Tramitarte/tramitarte/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+[2019-03-16 23:44:18 +0000] [6767] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/tramitarte/Tramitarte/tramitarte/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+[2019-03-16 23:44:22 +0000] [6773] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/tramitarte/Tramitarte/newEnv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/tramitarte/Tramitarte/tramitarte/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+Invalid HTTP_HOST header: '52.15.97.146'. You may need to add '52.15.97.146' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '52.15.97.146'. You may need to add '52.15.97.146' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: '52.15.97.146'. You may need to add '52.15.97.146' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '52.15.97.146'. You may need to add '52.15.97.146' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /webdav/
+Not Found: /App92610f34.php
+Not Found: /help.php
+Not Found: /java.php
+Not Found: /_query.php
+Not Found: /test.php
+Not Found: /db_cts.php
+Not Found: /logon.php
+Not Found: /help-e.php
+Not Found: /license.php
+Not Found: /log.php
+Not Found: /hell.php
+Not Found: /pmd_online.php
+Not Found: /x.php
+Not Found: /shell.php
+Not Found: /htdocs.php
+Not Found: /desktop.ini.php
+Not Found: /z.php
+Not Found: /lala.php
+Not Found: /lala-dpr.php
+Not Found: /wpc.php
+Not Found: /wpo.php
+Not Found: /t6nv.php
+Not Found: /muhstik.php
+Not Found: /text.php
+Not Found: /wp-config.php
+Not Found: /muhstik.php
+Not Found: /muhstik2.php
+Not Found: /muhstiks.php
+Not Found: /muhstik-dpr.php
+Not Found: /lol.php
+Not Found: /uploader.php
+Not Found: /cmd.php
+Not Found: /cmv.php
+Not Found: /cmdd.php
+Not Found: /knal.php
+Not Found: /cmd.php
+Not Found: /shell.php
+Not Found: /appserv.php
+Not Found: /scripts/setup.php
+Not Found: /phpmyadmin/scripts/setup.php
+Not Found: /phpMyAdmin/scripts/setup.php
+Not Found: /phpmyadmin/scripts/db___.init.php
+Not Found: /phpMyAdmin/scripts/db___.init.php
+Not Found: /plugins/weathermap/editor.php
+Not Found: /cacti/plugins/weathermap/editor.php
+Not Found: /d7.php
+Not Found: /rxr.php
+Not Found: /1x.php
+Not Found: /undx.php
+Not Found: /spider.php
+Not Found: /payload.php
+Not Found: /composers.php
+Not Found: /izom.php
+Not Found: /composer.php
+Not Found: /hue2.php
+Not Found: /Drupal.php
+Not Found: /lang.php
+Not Found: /libraries/joomla/jmail.php
+Not Found: /libraries/joomla/jmails.php
+Not Found: /libraries/joomla/wl.php
+Not Found: /wuwu11.php
+Not Found: /xw.php
+Not Found: /xw1.php
+Not Found: /9678.php
+Not Found: /wc.php
+Not Found: /xx.php
+Not Found: /s.php
+Not Found: /w.php
+Not Found: /sheep.php
+Not Found: /qaq.php
+Not Found: /db.init.php
+Not Found: /db_session.init.php
+Not Found: /db__.init.php
+Not Found: /wp-admins.php
+Not Found: /m.php
+Not Found: /099.php
+Not Found: /_404.php
+Not Found: /Alarg53.php
+Not Found: /lapan.php
+Not Found: /p34ky1337.php
+Not Found: /pk1914.php
+Not Found: /sllolx.php
+Not Found: /Skri.php
+Not Found: /db_dataml.php
+Not Found: /db_desql.php
+Not Found: /mx.php
+Not Found: /wshell.php
+Not Found: /xshell.php
+Not Found: /qq.php
+Not Found: /conflg.php
+Not Found: /conflg.php
+Not Found: /phpstudy.php
+Not Found: /phpStudy.php
+Not Found: /feixiang.php
+Not Found: /ak47.php
+Not Found: /ak48.php
+Not Found: /xiao.php
+Not Found: /yao.php
+Not Found: /defect.php
+Not Found: /webslee.php
+Not Found: /q.php
+Not Found: /pe.php
+Not Found: /hm.php
+Not Found: /cainiao.php
+Not Found: /zuoshou.php
+Not Found: /zuo.php
+Not Found: /aotu.php
+Not Found: /aotu7.php
+Not Found: /cmd.php
+Not Found: /bak.php
+Not Found: /system.php
+Not Found: /l6.php
+Not Found: /l7.php
+Not Found: /l8.php
+Not Found: /q.php
+Not Found: /56.php
+Not Found: /mz.php
+Not Found: /xx.php
+Not Found: /yumo.php
+Not Found: /min.php
+Not Found: /wan.php
+Not Found: /wanan.php
+Not Found: /ssaa.php
+Not Found: /qq.php
+Not Found: /aw.php
+Not Found: /12.php
+Not Found: /hh.php
+Not Found: /ak.php
+Not Found: /infoo.php
+Not Found: /qq.php
+Not Found: /qwe.php
+Not Found: /1213.php
+Not Found: /post.php
+Not Found: /aaaa.php
+Not Found: /h1.php
+Not Found: /test.php
+Not Found: /3.php
+Not Found: /phpinfi.php
+Not Found: /9510.php
+Not Found: /python.php
+Not Found: /default.php
+Not Found: /sean.php
+Not Found: /app.php
+Not Found: /help.php
+Not Found: /tiandi.php
+Not Found: /miao.php
+Not Found: /xz.php
+Not Found: /linuxse.php
+Not Found: /zuoindex.php
+Not Found: /zshmindex.php
+Not Found: /tomcat.php
+Not Found: /ceshi.php
+Not Found: /1hou.php
+Not Found: /ou2.php
+Not Found: /zuos.php
+Not Found: /zuoss.php
+Not Found: /zuoshss.php
+Not Found: /boots.php
+Not Found: /she.php
+Not Found: /s.php
+Not Found: /qw.php
+Not Found: /test.php
+Not Found: /caonma.php
+Not Found: /wcp.php
+Not Found: /u.php
+Not Found: /uuu.php
+Not Found: /sss.php
+Not Found: /ss.php
+Not Found: /sss.php
+Not Found: /mazi.php
+Not Found: /phpini.php
+Not Found: /1.php
+Not Found: /2.php
+Not Found: /core.php
+Not Found: /qaz.php
+Not Found: /sha.php
+Not Found: /ppx.php
+Not Found: /1.php
+Not Found: /confg.php
+Not Found: /conf1g.php
+Not Found: /confg.php
+Not Found: /confg.php
+Not Found: /confg.php
+Not Found: /ver.php
+Not Found: /hack.php
+Not Found: /qa.php
+Not Found: /Ss.php
+Not Found: /xxx.php
+Not Found: /92.php
+Not Found: /z.php
+Not Found: /x.php
+Not Found: /dexgp.php
+Not Found: /nuoxi.php
+Not Found: /godkey.php
+Not Found: /okokok.php
+Not Found: /erwa.php
+Not Found: /pma.php
+Not Found: /ruyi.php
+Not Found: /51314.php
+Not Found: /5201314.php
+Not Found: /fusheng.php
+Not Found: /general.php
+Not Found: /repeat.php
+Not Found: /ldw.php
+Not Found: /api.php
+Not Found: /s1.php
+Not Found: /xiaodai.php
+Not Found: /hello.php
+Not Found: /hello.php
+Not Found: /admn.php
+Not Found: /hell.php
+Not Found: /xp.php
+Not Found: /1.php
+Not Found: /2.php
+Not Found: /p.php
+Not Found: /1.php
+Not Found: /a.php
+Not Found: /m.php
+Not Found: /conf.php
+Not Found: /123.php
+Not Found: /HX.php
+Not Found: /diy.php
+Not Found: /666.php
+Not Found: /777.php
+Not Found: /qwq.php
+Not Found: /qwqw.php
+Not Found: /.php
+Not Found: /infos.php
+Not Found: /x.php
+Not Found: /lucky.php
+Not Found: /htfr.php
+Not Found: /zzk.php
+Not Found: /toor.php
+Not Found: /uu.php
+Not Found: /aa.php
+Not Found: /wb.php
+Not Found: /yj.php
+Not Found: /z.php
+Not Found: /7.php
+Not Found: /xiaoma.php
+Not Found: /xiaomae.php
+Not Found: /xiaomar.php
+Not Found: /qq.php
+Not Found: /data.php
+Not Found: /log.php
+Not Found: /fack.php
+Not Found: /angge.php
+Not Found: /cxfm666.php
+Not Found: /db.php
+Not Found: /hacly.php
+Not Found: /xiaomo.php
+Not Found: /xiaoyu.php
+Not Found: /xiaohei.php
+Not Found: /j.php
+Not Found: /qq5262.php
+Not Found: /lost.php
+Not Found: /php.php
+Not Found: /win.php
+Not Found: /win1.php
+Not Found: /linux.php
+Not Found: /linux1.php
+Not Found: /cc.php
+Not Found: /x.php
+Not Found: /lanke.php
+Not Found: /neko.php
+Not Found: /super.php
+Not Found: /cere.php
+Not Found: /aaa.php
+Not Found: /Administrator.php
+Not Found: /liangchen.php
+Not Found: /lucky.php
+Not Found: /meng.php
+Not Found: /no.php
+Not Found: /mysql.php
+Not Found: /Updata.php
+Not Found: /xxxx.php
+Not Found: /guai.php
+Not Found: /ljb.php
+Not Found: /www.php
+Not Found: /1.php
+Not Found: /chaoda.php
+Not Found: /qq.php
+Not Found: /vuln1.php
+Not Found: /orange.php
+Not Found: /erba.php
+Not Found: /link.php
+Not Found: /MCLi.php
+Not Found: /MCLi.php
+Not Found: /coon.php
+Not Found: /1.php
+Not Found: /zxc0.php
+Not Found: /zxc2.php
+Not Found: /indexa.php
+Not Found: /lx.php
+Not Found: /cn.php
+Not Found: /api.php
+Not Found: /index1.php
+Not Found: /info.php
+Not Found: /info1.php
+Not Found: /aaaaaa1.php
+Not Found: /up.php
+Not Found: /test123.php
+Not Found: /test123.php
+Not Found: /fb.php
+Not Found: /paylog.php
+Not Found: /paylog.php
+Not Found: /x.php
+Not Found: /cnm.php
+Not Found: /1ndex.php
+Not Found: /51.php
+Not Found: /cadre.php
+Not Found: /mm.php
+Not Found: /test.php
+Not Found: /1q.php
+Not Found: /1111.php
+Not Found: /errors.php
+Not Found: /q.php
+Not Found: /lanyecn.php
+Not Found: /mybestloves.php
+Not Found: /index.php
+Not Found: /phpmyadmin/index.php
+Not Found: /phpMyAdmin/index.php
+Not Found: /pmd/index.php
+Not Found: /pma/index.php
+Not Found: /PMA/index.php
+Not Found: /PMA2/index.php
+Not Found: /pmamy/index.php
+Not Found: /pmamy2/index.php
+Not Found: /mysql/index.php
+Not Found: /admin/index.php
+Not Found: /db/index.php
+Not Found: /dbadmin/index.php
+Not Found: /web/phpMyAdmin/index.php
+Not Found: /admin/pma/index.php
+Not Found: /admin/PMA/index.php
+Not Found: /admin/mysql/index.php
+Not Found: /admin/mysql2/index.php
+Not Found: /admin/phpmyadmin/index.php
+Not Found: /admin/phpMyAdmin/index.php
+Not Found: /admin/phpmyadmin2/index.php
+Not Found: /mysqladmin/index.php
+Not Found: /mysql-admin/index.php
+Not Found: /mysql_admin/index.php
+Not Found: /phpAdmin/index.php
+Not Found: /phpmyadmin0/index.php
+Not Found: /phpmyadmin1/index.php
+Not Found: /phpmyadmin2/index.php
+Not Found: /phpMyAdmin-4.4.0/index.php
+Not Found: /myadmin/index.php
+Not Found: /myadmin2/index.php
+Not Found: /xampp/phpmyadmin/index.php
+Not Found: /phpMyadmin_bak/index.php
+Not Found: /www/phpMyAdmin/index.php
+Not Found: /tools/phpMyAdmin/index.php
+Not Found: /phpmyadmin-old/index.php
+Not Found: /phpMyAdmin.old/index.php
+Not Found: /pma-old/index.php
+Not Found: /claroline/phpMyAdmin/index.php
+Not Found: /typo3/phpmyadmin/index.php
+Not Found: /phpma/index.php
+Not Found: /phpmyadmin/phpmyadmin/index.php
+Not Found: /phpMyAdmin/phpMyAdmin/index.php
+Not Found: /phpMyAbmin/index.php
+Not Found: /phpMyAdmin__/index.php
+Not Found: /phpMyAdmin+++---/index.php
+Not Found: /v/index.php
+Not Found: /phpmyadm1n/index.php
+Not Found: /phpMyAdm1n/index.php
+Not Found: /shaAdmin/index.php
+Not Found: /phpMyadmi/index.php
+Not Found: /phpMyAdmion/index.php
+Not Found: /s/index.php
+Not Found: /MyAdmin/index.php
+Not Found: /phpMyAdmin1/index.php
+Not Found: /phpMyAdmin123/index.php
+Not Found: /pwd/index.php
+Not Found: /phpMyAdmina/index.php
+Not Found: /phpMyAdmins/index.php
+Not Found: /phpMyAdmin._/index.php
+Not Found: /phpmyadmin2222/index.php
+Not Found: /php2MyAdmin/index.php
+Not Found: /phpiMyAdmin/index.php
+Not Found: /phpNyAdmin/index.php
+Not Found: /program/index.php
+Not Found: /shopdb/index.php
+Not Found: /phppma/index.php
+Not Found: /phpmy/index.php
+Not Found: /mysql/admin/index.php
+Not Found: /mysql/dbadmin/index.php
+Not Found: /mysql/sqlmanager/index.php
+Not Found: /mysql/mysqlmanager/index.php
+Not Found: /wp-content/plugins/portable-phpmyadmin/wp-pma-mod/index.php
+Not Found: /manager/html
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Invalid HTTP_HOST header: 'ec2-52-15-97-146.us-east-2.compute.amazonaws.com'. You may need to add 'ec2-52-15-97-146.us-east-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: 'ec2-52-15-97-146.us-east-2.compute.amazonaws.com'. You may need to add 'ec2-52-15-97-146.us-east-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: '18.216.229.93'. You may need to add '18.216.229.93' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '18.216.229.93'. You may need to add '18.216.229.93' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: '/home/tramitarte/Tramitarte/run/gunicorn.sock:'. The domain name provided is not valid according to RFC 1034/1035.
+Bad Request: /
+Invalid HTTP_HOST header: '18.216.229.93'. You may need to add '18.216.229.93' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: '18.216.229.93'. You may need to add '18.216.229.93' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /webapp/home
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /webapp/home
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /webapp/home
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /webapp/home
+Invalid HTTP_HOST header: 'tramitarte.tech'. You may need to add 'tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /media/icon.png
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
