@@ -2,7 +2,10 @@
 <body>
     <p>Ponga su documento en la camara</p>
     <form action="/sendDoc/" method="POST" enctype="multipart/form-data">
-        <input type="file" accept="image/*;capture=camera" name="image">
+        <h3>Cedula del vendedor</h3>
+        <input type="file" accept="image/*;capture=camera" name="image"><br>
+        <h3>Cedula del comprador</h3>
+        <!-- <input type="file" accept="image/*;capture=camera" name="image_buyer"> -->
         <input type="submit" value="Enviar" />
     </form>
 

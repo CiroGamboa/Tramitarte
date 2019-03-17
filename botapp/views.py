@@ -6,7 +6,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 # from series.models import Serie
 # from series.serializers import SerieSerializer
-from webapp.models import CodeState, DoubleCheck
+from webapp.models import CodeState, VehicleSell
 import random
 import string
 
@@ -26,19 +26,22 @@ Falta ver como asiganar el id del archivo, cuando se tengan archivos realmente
 '''
 @csrf_exempt
 def receive_code(request,input_code):
-    print("Codigo recibido")
-    try:
-        if request.method == 'GET':
-            print(input_code)
-            new_code = DoubleCheck.objects.create(
-                code = input_code, 
-                state = CodeState.objects.get(value='generated'), 
-                fileid = File.objects.get(id=1)
-            )
-        return HttpResponse(status=200)
+    #This is made now in the receive_doc method
 
-    except DoubleCheck.DoesNotExist:
-        return HttpResponse(status=400)
+    # print("Codigo recibido")
+    # try:
+    #     if request.method == 'GET':
+    #         print(input_code)
+    #         new_code = DoubleCheck.objects.create(
+    #             code = input_code, 
+    #             state = CodeState.objects.get(value='generated'), 
+    #             fileid = File.objects.get(id=1)
+    #         )
+    #     return HttpResponse(status=200)
+
+    # except DoubleCheck.DoesNotExist:
+    #     return HttpResponse(status=400)
+    return HttpResponse(status=400)
 
 @csrf_exempt
 def doc_view(request):
@@ -54,17 +57,29 @@ def random_string(string_len=6):
 
 @csrf_exempt
 def receive_doc(request):
+    '''
+    It is necessary to find the way to save both files at the same time
+    '''
     if request.method == 'POST':
+        print(request.FILES)
+        print(request.POST)
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
+
 
             # Generate unique code
             code = random_string(6)
             pic = form.cleaned_data['image']
-            state = CodeState.objects.create(value="generated")
-            new_record = DoubleCheck.objects.create(code=code,state=state,model_pic=pic)
-            new_record.save()
-            return HttpResponse("Se subioooo")
+            state = CodeState.objects.get(id=1)
+
+            last_sell = VehicleSell.objects.all().order_by('-id')[0]
+            if last_sell.buyer_pic == "images/":
+                last_sell.buyer_pic = pic
+            else:
+                last_sell = VehicleSell.objects.create(code=code,state=state,seller_pic=pic)
+            last_sell.save()
+
+            return render(request, 'botapp/doc.html', {})
 
         else:
             return HttpResponse("No se subioooo")

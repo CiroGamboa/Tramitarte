@@ -20,11 +20,12 @@ class CodeState(models.Model):
 #     model_pic = models.ImageField(upload_to = 'docs/', default = 'images/')
 
 
-class DoubleCheck(models.Model):
+class VehicleSell(models.Model):
     code = models.CharField(max_length=6, unique = True)
     state = models.ForeignKey(CodeState, on_delete=models.CASCADE)
     # fileid = models.ForeignKey(File, on_delete=models.CASCADE)
-    model_pic = models.ImageField(upload_to = 'docs/', default = 'images/')
+    seller_pic = models.ImageField(upload_to = 'docs/', default = 'images/', blank=True)
+    buyer_pic = models.ImageField(upload_to = 'docs/', default = 'images/', blank=True)
 
     def __str__(self):
         return self.code
@@ -43,20 +44,20 @@ class DatabaseHandler():
         state_checked = CodeState.objects.create(value="checked")
 
         # Creating File
-        test_path = "test_tramit_files/"
-        if not os.path.exists(test_path):
-            os.makedirs(test_path)
+        # test_path = "test_tramit_files/"
+        # if not os.path.exists(test_path):
+        #     os.makedirs(test_path)
         
-        file_name = "test_file.txt"
-        with open(os.path.join(test_path, file_name), 'w'):
-            pass
+        # file_name = "test_file.txt"
+        # with open(os.path.join(test_path, file_name), 'w'):
+        #     pass
         
         # test_file = open(file_name,"w")
         # test_file.write("Hello, World!")
 
         ## DB Handling
-        test_record = File.objects.create(path=os.path.join(test_path, file_name))
-        test_record.save()
+        # test_record = File.objects.create(path=os.path.join(test_path, file_name))
+        # test_record.save()
 
 
 
