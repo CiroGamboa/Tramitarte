@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
+from django.utils.encoding import smart_str
 from webapp.models import *
 # from series.models import Serie
 # from series.serializers import SerieSerializer
@@ -43,6 +44,15 @@ def check_code(request,input_code):
     except DoubleCheck.DoesNotExist:
         return render(request, 'webapp/tramitFailure.html', {})
 
+@csrf_exempt
+def file_down(request):
+
+    response = HttpResponse(content_type='application/force-download') # mimetype is replaced by content_type for django 1.7
+    response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("test_file.txt")
+    response['X-Sendfile'] = smart_str('/')
+    # It's usually a good idea to set the 'Content-Length' header too.
+    # You can also set any other required headers: Cache-Control, etc.
+    return response
 
 
 
