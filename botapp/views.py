@@ -37,6 +37,9 @@ def receive_code(request,input_code):
     except DoubleCheck.DoesNotExist:
         return HttpResponse(status=400)
 
+@csrf_exempt
+def get_doc(request):
+    return render(request, 'botapp/doc.html', {})
 
     
 
