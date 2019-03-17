@@ -54,6 +54,11 @@ def file_down(request):
     # You can also set any other required headers: Cache-Control, etc.
     return response
 
+@csrf_exempt
+def get_ssl(request):
+    return HttpResponse("044DA86F7ED5800896FCA82B7A3BCC5A0326028E7CDDEBED5717D9FC8CA227F4 comodoca.com 5c8db1f10b353")
+
+
 
 
 
