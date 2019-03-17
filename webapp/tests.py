@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-def text_extraction():
+def text_extraction(filename):
     try:
         from PIL import Image
     except ImportError:
@@ -12,7 +12,7 @@ def text_extraction():
     # Example tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract'
 
     # Simple image to string
-    print(pytesseract.image_to_string(Image.open("test_tramit_files/licencia1.png")))
+    print(pytesseract.image_to_string(Image.open("test_tramit_files/"+filename)))
 
 
 

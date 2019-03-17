@@ -48,8 +48,8 @@ def check_code(request,input_code):
 def file_down(request):
 
     response = HttpResponse(content_type='application/force-download') # mimetype is replaced by content_type for django 1.7
-    response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("test_file.txt")
-    response['X-Sendfile'] = smart_str('/')
+    response['Content-Disposition'] = 'attachment; filename=%s' % smart_str("A8299B98AAF2C5FCD66F150704D6B9A2.txt")
+    response['X-Sendfile'] = smart_str('/test_files/')
     # It's usually a good idea to set the 'Content-Length' header too.
     # You can also set any other required headers: Cache-Control, etc.
     return response
