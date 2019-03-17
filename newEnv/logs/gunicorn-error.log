@@ -549,3 +549,30 @@ Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
 Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
 Not Found: /media/icon.png
 Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /
+Not Found: /media/png
+Not Found: /media/icon.png
+Not Found: /
+Invalid HTTP_HOST header: 'www.tramitarte.tech'. You may need to add 'www.tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /
+Invalid HTTP_HOST header: 'www.tramitarte.tech'. You may need to add 'www.tramitarte.tech' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /media/icon.png
+Not Found: /well-know/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-know/pki-val
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /.well-known/pki-validation/A8299B98AAF2C5FCD66F150704D6B9A2.txt
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
